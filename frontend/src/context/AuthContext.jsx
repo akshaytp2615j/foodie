@@ -1,6 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+let baseApiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+if (baseApiUrl && !baseApiUrl.endsWith("/api") && !baseApiUrl.endsWith("/api/")) {
+  baseApiUrl = baseApiUrl.endsWith("/") ? `${baseApiUrl}api` : `${baseApiUrl}/api`;
+}
+export const API_URL = baseApiUrl;
 
 export const AuthContext = createContext(undefined);
 
