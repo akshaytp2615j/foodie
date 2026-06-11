@@ -1,30 +1,30 @@
-# 🍱 Fooie – Smart Food Donation Platform
+# 🍽️ Foodie – Smart Food Donation Platform
 
-Fooie is a full-stack web application designed to reduce food waste by connecting restaurants and food providers with NGOs and charitable organizations. The platform enables seamless food donation management, ensuring surplus food reaches those in need efficiently and securely.
+Foodie is a full-stack web application that bridges the gap between food providers and NGOs by enabling the donation of surplus food. The platform aims to reduce food wastage while ensuring that edible food reaches people in need through a secure and efficient donation system.
 
 ---
 
 ## 🚀 Features
 
-### 🍽️ For Food Providers
+### 🍴 Food Providers
+
+* Secure registration and authentication.
+* Create and manage food donation listings.
+* Track active and completed donations.
+* Manage profile and donation history.
+
+### 🤝 NGOs
 
 * Secure registration and login.
-* Create and manage food donation listings.
-* Track donation history.
-* Manage profile and availability.
-
-### 🤝 For NGOs
-
-* Secure authentication.
 * Browse available food donations.
-* Accept and manage donations.
-* Track received contributions.
+* Accept and manage food requests.
+* Track received donations.
 
-### 🔒 Authentication & Security
+### 🔐 Secure Authentication
 
 * JWT-based authentication.
-* Password hashing with bcryptjs.
-* Role-based user access.
+* Password encryption using bcryptjs.
+* Role-based access control.
 
 ---
 
@@ -34,8 +34,8 @@ Fooie is a full-stack web application designed to reduce food waste by connectin
 
 * React.js
 * Vite
-* React Router
-* Modern CSS
+* React Router DOM
+* CSS
 
 ### Backend
 
@@ -54,24 +54,12 @@ Fooie is a full-stack web application designed to reduce food waste by connectin
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
-Fooie/
-│
+Foodie/
 ├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
 ├── backend/
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   ├── middleware/
-│   ├── package.json
-│   └── .env
-│
 └── README.md
 ```
 
@@ -82,11 +70,11 @@ Fooie/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/fooie.git
-cd fooie
+git clone https://github.com/yourusername/foodie.git
+cd foodie
 ```
 
-### Backend Setup
+### Backend
 
 ```bash
 cd backend
@@ -94,7 +82,7 @@ npm install
 npm run dev
 ```
 
-### Frontend Setup
+### Frontend
 
 ```bash
 cd frontend
@@ -108,25 +96,25 @@ npm run dev
 
 Create a `.env` file inside the backend directory.
 
-```env
+```
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=your_secret_key
 ```
 
 ---
 
-## 🎯 Mission
+## 🎯 Objective
 
-Every day, large quantities of edible food go to waste while many people struggle to access nutritious meals. Fooie bridges this gap by creating a digital ecosystem where surplus food can be donated quickly and efficiently to organizations that distribute it to those in need.
+Foodie is designed to minimize food waste by providing a digital platform where restaurants and food providers can donate surplus food to NGOs, enabling efficient food distribution and promoting social responsibility.
 
 ---
 
 ## 🌟 Future Enhancements
 
-* Real-time donation status updates.
-* Interactive maps for nearby donations.
-* Push and email notifications.
+* Real-time donation tracking.
+* Location-based food matching.
+* Email and push notifications.
 * Admin dashboard.
 * Analytics and reporting.
 * Mobile application support.
@@ -135,14 +123,14 @@ Every day, large quantities of edible food go to waste while many people struggl
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to fork the repository, create a feature branch, and submit a pull request.
+Contributions are welcome. Feel free to fork the repository and submit pull requests.
 
 ---
 
 ## 📜 License
 
-This project is developed for educational and social impact purposes.
+This project is intended for educational and social impact purposes.
 
 ---
 
-### Made with ❤️ to reduce food waste and support communities.
+### 🌱 Reducing Food Waste, One Donation at a Time.
