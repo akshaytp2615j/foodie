@@ -19,6 +19,14 @@ const JWT_SECRET = process.env.JWT_SECRET || "super_secret_savr_jwt_key_123!";
 app.use(cors());
 app.use(express.json());
 
+// Root endpoints for deployment health checks
+app.get("/", (req, res) => {
+  res.json({ message: "Foodie API is running successfully!" });
+});
+app.get("/api", (req, res) => {
+  res.json({ message: "Foodie API endpoints are available under /api" });
+});
+
 // Helper: Haversine Geodetic Distance in km
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const R = 6371; // Earth's radius in kilometers
@@ -579,6 +587,11 @@ setInterval(async () => {
     console.error("Auto-expiry job error:", err);
   }
 }, 30000); // Check every 30 seconds
+
+// Catch-all route to return JSON instead of default Express HTML 404
+app.use((req, res) => {
+  res.status(404).json({ error: `Route ${req.method} ${req.url} not found. Make sure your API_URL configuration includes the '/api' prefix.` });
+});
 
 mongoose
   .connect(MONGODB_URI)
