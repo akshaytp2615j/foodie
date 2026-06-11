@@ -19,6 +19,14 @@ const JWT_SECRET = process.env.JWT_SECRET || "super_secret_savr_jwt_key_123!";
 app.use(cors());
 app.use(express.json());
 
+// URL Rewrite Middleware: Redirects requests missing '/api' prefix to their correct endpoint
+app.use((req, res, next) => {
+  if (req.url.startsWith("/auth") || req.url.startsWith("/donations") || req.url.startsWith("/leaderboard")) {
+    req.url = `/api${req.url}`;
+  }
+  next();
+});
+
 // Root endpoints for deployment health checks
 app.get("/", (req, res) => {
   res.json({ message: "Foodie API is running successfully!" });
